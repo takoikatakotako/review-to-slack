@@ -77,7 +77,7 @@ func main() {
 		log.Fatal("Fail to Fetch,", err)
 	}
 
-	yesterday := time.Now().AddDate(0, -1, -1)
+	yesterday := time.Now().AddDate(0, 0, -1)
 	fmt.Println(yesterday)
 
 	for i := 0; i < len(entries); i++ {
@@ -89,20 +89,18 @@ func main() {
 }
 
 func fetchEntries(id string) (entries []Entry, err error) {
-	// API呼び出し
 	res, err := http.Get("https://itunes.apple.com/jp/rss/customerreviews/id=" + id + "/sortBy=mostRecent/json")
 	if err != nil {
 		return nil, err
 	}
 	defer res.Body.Close()
 
-	// jsonを読み込む
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		return nil, err
 	}
 
-	// JSONデコード
+	// decode
 	var response JsonResponse
 	if err := json.Unmarshal(body, &response); err != nil {
 		return nil, err

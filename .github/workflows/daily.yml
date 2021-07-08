@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: go build review.go
 
-    - name: Campus
+    - name: Campus Candidate
       run: ./review 1144836532 ${{secrets.SLACK_WEBHOOK_URL}} 
 
     - name: Rikako
