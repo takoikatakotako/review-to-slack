@@ -22,5 +22,17 @@ jobs:
     - name: Campus Candidate
       run: ./review 1144836532 ${{secrets.SLACK_WEBHOOK_URL}} 
 
+    - name: Campus OB
+      run: ./review 1255781175 ${{secrets.SLACK_WEBHOOK_URL}} 
+
     - name: Rikako
       run: ./review 960647263 ${{secrets.SLACK_WEBHOOK_URL}} 
+
+    - name: Reaction
+      run: ./review 674401547 ${{secrets.SLACK_WEBHOOK_URL}} 
+
+    - name: Resistance
+      run: ./review 1034171119 ${{secrets.SLACK_WEBHOOK_URL}} 
+
+    - name: Charalarm
+      run: ./review 1296641818 ${{secrets.SLACK_WEBHOOK_URL}} 
