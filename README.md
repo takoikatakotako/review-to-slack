@@ -1,23 +1,10 @@
+# App Review to Slack
+
+This is a bot that fetches app reviews and posts them to Slack.
 
 
-Rikako
-https://itunes.apple.com/jp/rss/customerreviews/id=960647263/sortBy=mostRecent/json
+## Set UP
 
-
-go run review.go
-
-
-docker build --progress=plain -t local:go .
-
-docker run --rm local:go
-
-docker run --rm local:go
-
-
-
-go run firestore.go
-
-go mod download
-
-
-https://firebase.google.com/docs/firestore/quickstart#go
+- Fork this repository
+- Set Slack Webhook Url to the secret with the name SLACK_WEBHOOK_URL
+- Edit `daily.yml`
