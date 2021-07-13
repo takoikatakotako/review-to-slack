@@ -36,3 +36,6 @@ jobs:
 
     - name: Charalarm
       run: ./review 1296641818 ${{secrets.SLACK_WEBHOOK_URL}} 
+
+    - name: Write & Record
+      run: ./review 1557408731 ${{secrets.WRITE_REC_SLACK_WEBHOOK_URL}} 
